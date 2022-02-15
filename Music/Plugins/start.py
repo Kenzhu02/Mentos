@@ -21,11 +21,11 @@ from Music.MusicUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="🎚 Commands Menu", url="https://telegra.ph/Mentos-Music-11-27")
+                InlineKeyboardButton(text="🎚 Commands Menu", url="https://telegra.ph/Zhu剣-ᴇx-02-15")
             ],
             [ 
-                InlineKeyboardButton(text="📨Official Channel", url="https://t.me/xMentosUpdates"),
-                InlineKeyboardButton(text="📨Support Group", url="https://t.me/xMentosSupport")
+                InlineKeyboardButton(text="📨Official Channel", url="https://t.me/inibitsaya"),
+                InlineKeyboardButton(text="📨Support Group", url="https://t.me/triplenineee")
             ],
     ]
     return "🎛  **This is Music Music Bot**", buttons
@@ -33,16 +33,16 @@ def start_pannel():
 pstart_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("💞 Sᴜᴍᴍᴏɴ Mᴇ 💞", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                    InlineKeyboardButton("🔺 ƭαɱɓαɦҡαɳ ҡε ɠɾσµρ 🔺", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
                 ], 
-                [InlineKeyboardButton("🧰 Cᴏᴍᴍᴀɴᴅꜱ 🧰", url=f"https://telegra.ph/Chutuya-11-27")],
+                [InlineKeyboardButton("⚙️ ρεɾเɳƭαɦ ⚙️", url=f"https://telegra.ph/Zhu剣-ᴇx-02-15")],
                 [
                     InlineKeyboardButton(
-                        "📢 Uᴘᴅᴀᴛᴇꜱ 📢", url=f"https://t.me/xMentosUpdates"), 
+                        "⚡ µρ∂αƭε ⚡", url=f"https://t.me/inibotsaya"), 
                     InlineKeyboardButton(
-                        "💬 Sᴜᴘᴘᴏʀᴛ 💬", url=f"https://t.me/xMentosSupport")
+                        "💬 รµρρσɾƭ 💬", url=f"https://t.me/Kenzusupport")
                 ],
-                [ InlineKeyboardButton("🧑‍💻 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ 🧑‍💻", url=f"https://GitHub.com/ToxicCybers/MentosMusic"),]
+                [ InlineKeyboardButton("🧑‍💻 σωɳεɾ 🧑‍💻", url=f"https://t.me/triplenineee"),]
 
             ]
         )
@@ -103,20 +103,20 @@ async def play(_, message: Message):
                 x = ytdl.extract_info(query, download=False)
             thumbnail = (x["thumbnail"])
             searched_text = f"""
-🔍__**Video Track Information**__
+🔍__**Informasi Video**__
 
-❇️**Title:** {x["title"]}
+🎧**Judul:** {x["title"]}
    
-⏳**Duration:** {round(x["duration"] / 60)} Mins
+⏳**Durasi:** {round(x["duration"] / 60)} Mins
 👀**Views:** `{x["view_count"]}`
-👍**Likes:** `{x["like_count"]}`
-👎**Dislikes:** `{x["dislike_count"]}`
-⭐️**Average Ratings:** {x["average_rating"]}
-🎥**Channel Name:** {x["uploader"]}
-📎**Channel Link:** [Visit From Here]({x["channel_url"]})
+👍**Suka:** `{x["like_count"]}`
+👎**Tidak Suka:** `{x["dislike_count"]}`
+⭐️**Penghargaan:** {x["average_rating"]}
+📜**Nama Channel:** {x["uploader"]}
+📎**Channel Url:** [Visit From Here]({x["channel_url"]})
 🔗**Link:** [Link]({x["webpage_url"]})
 
-⚡️ __Searched Powered By Mentos Music Bot__"""
+⚡️ __Pencarian Oleh Kagura Music Bot__"""
             link = (x["webpage_url"])
             buttons = personal_markup(link)
             userid = message.from_user.id
@@ -129,7 +129,7 @@ async def play(_, message: Message):
             )
         if str(finxx) == "sud":
             sudoers = await get_sudoers()
-            text = "**__Sudo Users List of Music:-__**\n\n"
+            text = "**__Daftar Sudo Kagura Music:-__**\n\n"
             for count, user_id in enumerate(sudoers, 1):
                 try:                     
                     user = await app.get_users(user_id)
