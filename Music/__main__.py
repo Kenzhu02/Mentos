@@ -52,7 +52,7 @@ async def main():
             print("Error came while clearing db")
             pass     
     await client.send_message(LOG_GROUP_ID, "✅ Assistant Aktif")
-    await app.send_message(chat_id, "✅ Bot telah diaktifkan")
+    await app.send_message("✅ Bot telah diaktifkan")
     print("[INFO]: STARTED")
     
    
