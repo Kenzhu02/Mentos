@@ -34,7 +34,7 @@ async def main():
             await app.edit_message_text(
                 restart_data["chat_id"],
                 restart_data["message_id"],
-                "**Restarted the Bot Successfully.**",
+                "**✅ Shinobi Music di mulai ulang.**",
             )
         except Exception:
             pass
@@ -51,8 +51,8 @@ async def main():
         except Exception as e:
             print("Error came while clearing db")
             pass     
-    await app.send_message(LOG_GROUP_ID, "Bot Started")
-    await client.send_message(LOG_GROUP_ID, "Assistant Started")
+    await client.send_message(LOG_GROUP_ID, "✅ Assistant Aktif")
+    await app.send_message(chat_id, "✅ Bot telah diaktifkan")
     print("[INFO]: STARTED")
     
    
